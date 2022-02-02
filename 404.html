@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<title>Redirecting...</title>
+<script type="text/javascript">
+var loc;
+
+if (window.location.pathname === "/test") loc = "https://google.com";
+else if (window.location.pathname === "/test2") loc = "https://youtube.com";
+
+if (loc) window.location = loc + window.location.search + window.location.hash;
+else document.body.style.display = "inline";
+</script>
+</head>
+<body style="display: none;">
+<h1>404 Not Found</h1>
+<p>Please <a href="https://iiep.gwu.edu/">click here</a> to go to the IIEP home page.</p>
+</body>
+</html>
