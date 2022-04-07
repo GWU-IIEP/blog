@@ -218,11 +218,10 @@ var redirects = {
 };
 
 if (redirects.hasOwnProperty(window.location.pathname)) window.location = redirects[window.location.pathname] + window.location.search + window.location.hash;
-else document.body.style.display = "inline";
+else window.location = "https://iiep.gwu.edu";
 </script>
 </head>
-<body style="display: none;">
-<h1>404 Not Found</h1>
-<p>Please <a href="https://iiep.gwu.edu/">click here</a> to go to the IIEP home page.</p>
+<body>
+<p>It seems like you have Javascript disabled. Please enable it to be redirected, or <a href="https://iiep.gwu.edu/">click here</a> to go to the IIEP home page.</p>
 </body>
 </html>
