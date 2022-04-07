@@ -217,8 +217,9 @@ var redirects = {
 "/international-trade/a-simple-argument-for-free-trade": "https://blogs.gwu.edu/elliott-iiep/2022/02/26/a-simple-argument-for-free-trade/"
 };
 
-if (redirects.hasOwnProperty(window.location.pathname)) window.location = redirects[window.location.pathname] + window.location.search + window.location.hash;
-else window.location = "https://iiep.gwu.edu";
+var loc = window.location.pathname;
+if (loc.endsWith("/")) loc = loc.substr(0, loc.length-1);
+if (redirects.hasOwnProperty(loc)) window.location = redirects[loc] + window.location.search + window.location.hash;
 </script>
 </head>
 <body>
